@@ -1,4 +1,4 @@
 echo setup start
 wsl ./setup_ubuntu.sh
 wsl ./setup_nnsvs.sh
-echo setup finished
+echo setup end
