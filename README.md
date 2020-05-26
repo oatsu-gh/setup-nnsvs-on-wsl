@@ -1,6 +1,6 @@
 # setup-nnsvs-ubuntu-wsl
 
-WindowsのWSL1でNNSVSの環境構築するバッチとシェルスクリプト
+WindowsのWSL1で[NNSVS](https://github.com/r9y9/nnsvs)の環境構築するバッチとシェルスクリプト
 
 ## 動作確認環境
 
@@ -11,7 +11,7 @@ WindowsのWSL1でNNSVSの環境構築するバッチとシェルスクリプト
 ## 著作権表記
 
 Copyright (c) 2020 Ryuichi Yamamoto  
-setup_nnsvs は NNSVS 内の手順書（[リンク](https://github.com/r9y9/nnsvs/blob/76552acbdad7d17a07debeec39db592cae529b4b/.github/workflows/ci.yml#L20-L52)）を改変したものです。
+[setup_nnsvs.sh](https://github.com/oatsu-gh/setup-nnsvs-ubuntu-wsl/blob/master/setup_nnsvs.sh) は NNSVS 内の手順書（[リンク](https://github.com/r9y9/nnsvs/blob/76552acbdad7d17a07debeec39db592cae529b4b/.github/workflows/ci.yml#L20-L52)）を改変したものです。
 
 ## 使い方
 
