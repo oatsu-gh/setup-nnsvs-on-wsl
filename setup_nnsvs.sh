@@ -12,6 +12,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
 # 必要なコマンドを準備しておく
 sudo apt install cmake -y
+sudo apt install git -y
 # pip のアプデ
 python3 -m pip install --upgrade pip
 
