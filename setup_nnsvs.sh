@@ -6,6 +6,7 @@
 
 echo '(c) 2020 Ryuichi Yamamoto'
 # Ubuntuの更新
+cd ~
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
 # 必要なコマンドを準備しておく

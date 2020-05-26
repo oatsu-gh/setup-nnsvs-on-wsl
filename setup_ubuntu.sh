@@ -1,4 +1,5 @@
 # Ubuntu の更新
+cd ~
 sudo apt update && sudo apt upgrade -y && sudo autoremove
 
 # pip3のインストール
