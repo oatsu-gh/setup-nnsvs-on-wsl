@@ -1,3 +1,10 @@
+# (c) 2020 oatsu
+
+# (c) 2020 Ryuichi Yamamoto
+# 山本りゅういち様のこちらコードを改変して作りました。
+# (https://github.com/r9y9/nnsvs/blob/76552acbdad7d17a07debeec39db592cae529b4b/.github/workflows/ci.yml#L20-L52)
+
+echo '(c) 2020 Ryuichi Yamamoto'
 # Ubuntuの更新
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
@@ -6,9 +13,10 @@ sudo apt install cmake -y
 # pip のアプデ
 python3 -m pip install --upgrade pip
 
-# NNSVSをインストールするフォルダを作る
+# NNSVSをダウンロードして作業フォルダにする
 cd ~
-mkdir nnsvs
+git clone https://github.com/r9y9/nnsvs
+cd nnsvs
 
 #  hts_engine_API をインストール
 git clone https://github.com/r9y9/hts_engine_API
@@ -23,18 +31,18 @@ cd sinsy/src/ && mkdir -p build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON  .. && make -j && sudo make install
 cd ../../../ && rm -rf sinsy
 
-# NNSVSをインストール
-git clone https://github.com/r9y9/nnsvs
-cd nnsvs
+
 # Pythonのパッケージをダウンロード
 # python3 -m pip install --upgrade pip # 8行目でやったので省略
-pip3 install -r requirements.txt && pip3 install -e .
-sudo pip3 install -r requirements.txt
+sudo pip3 install -r requirements.txt && sudo pip3 install -e .
 
 # PySinsyをインストール
 git clone https://github.com/r9y9/pysinsy
 cd pysinsy
 sudo python3 setup.py install
 cd ..
+
+# NNSVS のセットアップ
+sudo python3 setup.py develop
 
 # おわり
