@@ -4,7 +4,7 @@ WindowsのWSL1でNNSVSの環境構築するバッチとシェルスクリプト
 
 ## 著作権表記
 
-(c) 2020 Ryuichi Yamamoto  
+Copyright (c) 2020 Ryuichi Yamamoto
 setup_nnsvs は NNSVS 内の手順書（[リンク](https://github.com/r9y9/nnsvs/blob/76552acbdad7d17a07debeec39db592cae529b4b/.github/workflows/ci.yml#L20-L52)）を改変したものです。
 
 ## 使い方
@@ -25,4 +25,3 @@ WSL上から
     ./setup_nnsvs.sh
 
 してください。
-

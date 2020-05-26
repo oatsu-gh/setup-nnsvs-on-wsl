@@ -1,10 +1,11 @@
-# (c) 2020 oatsu
+# Copyright (c) 2020 oatsu
 
-# (c) 2020 Ryuichi Yamamoto
+# Copyright (c) 2020 Ryuichi Yamamoto
 # 山本りゅういち様のこちらコードを改変して作りました。
 # (https://github.com/r9y9/nnsvs/blob/76552acbdad7d17a07debeec39db592cae529b4b/.github/workflows/ci.yml#L20-L52)
+echo 'Copyright (c) 2020 Ryuichi Yamamoto'
+echo \
 
-echo '(c) 2020 Ryuichi Yamamoto'
 # Ubuntuの更新
 cd ~
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
