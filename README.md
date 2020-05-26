@@ -33,4 +33,4 @@ WSL上から
     cd setup-nnsvs-ubuntu-wsl
     ./setup_nnsvs.sh
 
-してください。
+してください。あと権限周りでエラーが出たら適当に書き換えてください。
