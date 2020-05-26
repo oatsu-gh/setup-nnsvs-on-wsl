@@ -1,5 +1,5 @@
 # Ubuntu の更新
-sudo install update && sudo install upgrade -y && sudo autoremove
+sudo apt update && sudo apt upgrade -y && sudo autoremove
 
 # pip3のインストール
 sudo apt install python3-pip
