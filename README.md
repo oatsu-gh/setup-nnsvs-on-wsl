@@ -5,8 +5,7 @@ WindowsのWSL1で[NNSVS](https://github.com/r9y9/nnsvs)の環境構築するバ�
 ## 動作確認環境
 
 - Windows 10 Education, Home 1909
-- WSL1
-- Ubuntu 20.04 LTS,
+- WSL1, 2（Ubuntu 20.04 LTS, Debian）
 
 ## 著作権表記
 
