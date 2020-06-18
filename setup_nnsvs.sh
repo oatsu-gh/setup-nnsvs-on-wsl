@@ -35,14 +35,17 @@ cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON  .. && make -j && sudo m
 cd ../../../ && rm -rf sinsy
 
 
-# Pythonのパッケージをダウンロード
-# python3 -m pip install --upgrade pip # 8行目でやったので省略
-sudo pip3 install -r requirements.txt && sudo pip3 install -e .
-
 # PySinsyをインストール
 git clone https://github.com/r9y9/pysinsy
 cd pysinsy
+sudo pip3 install --user -r requirements.txt 
+sudo pip3 install --user -e . 
 sudo python3 setup.py install
+
+# Pysinsyの動作テスト
+export LD_LIBRARY_PATH=/usr/local/lib
+pip3 install pytest
+pytest
 cd ..
 
 # NNSVS のセットアップ
