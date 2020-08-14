@@ -38,8 +38,8 @@ cd ../../../ && rm -rf sinsy
 # PySinsyをインストール
 git clone https://github.com/r9y9/pysinsy
 cd pysinsy
-sudo pip3 install --user -r requirements.txt 
-sudo pip3 install --user -e . 
+sudo pip3 install --user -r requirements.txt
+sudo pip3 install --user -e .
 sudo python3 setup.py install
 
 # Pysinsyの動作テスト
