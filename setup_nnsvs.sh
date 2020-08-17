@@ -15,7 +15,6 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove
 # Python3 パッケージ管理ツールのインストール
 sudo apt install python3-pip -y
 sudo apt install cmake -y
-sudo apt install git -y
 
 # Python3 で使うNumPyとCythonをインストール
 # python3 -m pip install --upgrade pip
