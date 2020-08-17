@@ -19,14 +19,14 @@ WSL上に[NNSVS](https://github.com/r9y9/nnsvs)の環境構築するバッチと
 
 ### 普段からWSLを使う人
 
-WSL上
+WSL上で次のコマンドを実行してください。
 
-    git clone https://github.com/oatsu-gh/setup-nnsvs-on-wsl
-    cd setup-nnsvs-on-wsl
-    chmod 744 setup_nnsvs.sh
-    ./setup_nnsvs.sh
-
-してください。
+```shell
+git clone https://github.com/oatsu-gh/setup-nnsvs-on-wsl
+cd setup-nnsvs-on-wsl
+chmod 744 setup_nnsvs.sh
+./setup_nnsvs.sh
+```
 
 ## 参考
 
