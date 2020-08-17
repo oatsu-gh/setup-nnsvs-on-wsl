@@ -6,9 +6,11 @@
 # Google Colaboratory で NNSVS で遊ぶ mini-HOWTO - Qiita
 # https://qiita.com/taroushirani/items/ec16cb9a6b3b691f5e74
 #
-# 初期状態$PATH
+# 初期$PATH
 # /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program
 #
+
+cd ~
 
 # Ubuntuの更新
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove
