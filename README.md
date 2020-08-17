@@ -1,11 +1,11 @@
 # setup-nnsvs-ubuntu-wsl
 
-WindowsのWSL1で[NNSVS](https://github.com/r9y9/nnsvs)の環境構築するバッチとシェルスクリプト
+WSLで[NNSVS](https://github.com/r9y9/nnsvs)の環境構築するバッチとシェルスクリプト
 
 ## 動作確認環境
 
-- Windows 10 Education, Home 1909
-- WSL1, 2（Ubuntu 20.04 LTS, Debian）
+-   Windows 10 Home 2004
+-   WSL1, 2（Ubuntu 20.04 LTS, Debian）
 
 ## 著作権表記
 
@@ -16,20 +16,18 @@ Copyright (c) 2020 Ryuichi Yamamoto
 
 ### WSLを普段使わない人
 
-1.  WSLのインストールとユーザー作成を行ってください（わりと簡単です）。「WSL インストール」でググったらたくさん出ます。
+1.  WSLのインストールとユーザー作成を行ってください。「WSL インストール」でググったらたくさん出ます。
 2.  **[ここ](https://github.com/oatsu-gh/setup-nnsvs-ubuntu-wsl/archive/master.zip)** からダウンロードした zip を解凍
 3.  解凍したフォルダで「Shift + 右クリック」してPowerShellまたはコマンドプロンプトを起動
-4. PowerShellで `.\setup_nnsvs_cmd.bat` を実行。（セキュリティ関連の警告が出るかもしれません。）
-5. 10分から30分ほど待機。たまにパスワード入力を求められるので入力してください。
+4.  PowerShellで `.\setup_nnsvs_cmd.bat` を実行。（セキュリティ関連の警告が出るかもしれません。）
+5.  10分から30分ほど待機。たまにパスワード入力を求められるので入力してください。
 
 ### 普段からWSLを使う人
 
-bashrcをいじってほしくない人向けのやり方です。  
-余計な設定を変えないようにするため、
-WSL上から
+WSL上で
 
     git clone https://github.com/oatsu-gh/setup-nnsvs-ubuntu-wsl
     cd setup-nnsvs-ubuntu-wsl
     ./setup_nnsvs.sh
 
-してください。あと権限周りでエラーが出たら適当に書き換えてください。
+してください。
