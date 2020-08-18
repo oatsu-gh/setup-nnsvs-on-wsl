@@ -21,7 +21,7 @@ sudo apt install cmake -y
 # Python3 で使うNumPyとCythonをインストール
 # python3 -m pip install --upgrade pip
 pip3 install --upgrade pip
-pip3 install --user numpy cython
+pip3 install --user numpy cython wheel
 # ---------------------------------------------------------
 # PATH通ってないけど大丈夫？って言われるけど気にしなくてOK
 # ---------------------------------------------------------
@@ -58,6 +58,9 @@ cd ~
 # NNSVS をインストール
 # これ結構時間かかる
 git clone https://github.com/r9y9/nnsvs
+# ModuleNotFoundError: No module named 'nnsvs.io' になるのを対策
+touch nnsvs/nnsvs/io/__init__.py
+
 cd nnsvs && pip3 install .
 # ---------------------------------------------------------
 # PATH通ってないけど大丈夫？って言われるけど気にしなくてOK
@@ -70,5 +73,13 @@ cd ~
 sudo apt install python-is-python3
 
 # もうビルド終わったフォルダいらないんじゃない？
-# rm -rf Sinsy
-# rm -rf hts_engine_API
+rm -rf Sinsy hts_engine_API pysinsy
+rm -rf nnsvs/nnsvs
+
+# nnsvs/run.sh の stage1 で躓く問題を対策 (詳細: bandmat をPyPIからインストールできない。)
+git clone https://github.com/MattShannon/bandmat
+cd bandmat && pip3 install .
+cd ~
+
+# 「おふとんP 歌声DB」でつかうライブラリをインストール
+pip3 install jaconv
