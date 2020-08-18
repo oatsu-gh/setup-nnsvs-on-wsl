@@ -7,6 +7,10 @@ WSL上に[NNSVS](https://github.com/r9y9/nnsvs)の環境構築するバッチと
 -   Windows 10 Home 2004
 -   WSL1, 2（Ubuntu 20.04 LTS, Debian）
 
+### 補足
+
+`autocrlf = false` にしてあります。
+
 ## 使い方
 
 ### WSLを普段使わない人
