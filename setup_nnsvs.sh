@@ -38,7 +38,7 @@ cd ~
 # Sinsyをビルド
 git clone https://github.com/r9y9/sinsy
 cd sinsy/src/ && mkdir -p build && cd build
-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON  -DCMAKE_INSTALL_PREFIX=/usr/ ..
+cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON  -DCMAKE_INSTALL_PREFIX=/usr/local/ ..
 make -j  > sinsy_build.log 2>&1
 sudo make install # original: make install
 cd ~
@@ -46,7 +46,7 @@ cd ~
 # PySinsyをインストール
 git clone https://github.com/r9y9/pysinsy
 cd pysinsy
-export SINSY_INSTALL_PREFIX=/usr/
+export SINSY_INSTALL_PREFIX=/usr/local/
 pip3 install .
 cd ~
 
@@ -71,10 +71,6 @@ cd ~
 # UbuntuならできますがDebianは失敗します。
 
 sudo apt install python-is-python3
-
-# もうビルド終わったフォルダいらないんじゃない？
-rm -rf Sinsy hts_engine_API pysinsy
-rm -rf nnsvs/nnsvs
 
 # nnsvs/run.sh の stage1 で躓く問題を対策 (詳細: bandmat をPyPIからインストールできない。)
 git clone https://github.com/MattShannon/bandmat
