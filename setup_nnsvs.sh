@@ -51,9 +51,10 @@ pip3 install .
 cd ~
 
 # nnmnkwii をインストール
-git clone https://github.com/r9y9/nnmnkwii
-cd nnmnkwii && pip3 install .
-cd ~
+pip3 install nnmnkwii
+# git clone https://github.com/r9y9/nnmnkwii
+# cd nnmnkwii && pip3 install .
+# cd ~
 
 # NNSVS をインストール
 # これ結構時間かかる
