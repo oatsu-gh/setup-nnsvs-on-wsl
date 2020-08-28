@@ -9,7 +9,7 @@ WSL上に[NNSVS](https://github.com/r9y9/nnsvs)の環境構築するバッチと
 
 ### 補足
 
-`autocrlf = false` にしてあります。
+- `autocrlf = false` にしてあります。
 
 ## 使い方
 
@@ -36,5 +36,12 @@ chmod 744 setup_nnsvs.sh
 
 -   [Google Colaboratory で NNSVS で遊ぶ mini-HOWTO - Qiita](https://qiita.com/taroushirani/items/ec16cb9a6b3b691f5e74)
     -   setup_nnsvs.sh はほぼ上記記事のコピペです。
-    -   sudoを数か所増やしました。
+    -   `sudo` を数か所増やしました。
+    -   各種ライブラリのインストールパスをWSL用に調整しました。
     -   `python` `pip` を `python3` `pip3` にしました。
+
+## おまけ
+
+### WSLのGPU利用環境構築（参考記事）
+
+- [WSL 2 で GPU を使う（WSL 2 の Ubuntu で，CUDA や PyTorch や TensorFlow 2.2 GPU 版を動かす．Docker は使わない，Windows 10 Insider Program，WSL 2 上 の Ubuntu を使用）](https://www.kkaneko.jp/tools/wsl/wsl_tensorflow2.html)
