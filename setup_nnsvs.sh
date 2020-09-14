@@ -51,17 +51,14 @@ pip3 install .
 cd ~
 
 # nnmnkwii をインストール
-pip3 install nnmnkwii
-# git clone https://github.com/r9y9/nnmnkwii
-# cd nnmnkwii && pip3 install .
-# cd ~
+# pip3 install nnmnkwii
+git clone https://github.com/r9y9/nnmnkwii
+cd nnmnkwii && pip3 install .
+cd ~
 
 # NNSVS をインストール
 # これ結構時間かかる
 git clone https://github.com/r9y9/nnsvs
-# ModuleNotFoundError: No module named 'nnsvs.io' になるのを対策
-touch nnsvs/nnsvs/io/__init__.py
-
 cd nnsvs && pip3 install .
 # ---------------------------------------------------------
 # PATH通ってないけど大丈夫？って言われるけど気にしなくてOK
@@ -80,5 +77,3 @@ cd ~
 
 # 「おふとんP 歌声DB」でつかうライブラリをインストール
 pip3 install jaconv
-# pysinsyからSinsyを呼び出せるようにする
-export LD_LIBRARY_PATH=/usr/local/lib
