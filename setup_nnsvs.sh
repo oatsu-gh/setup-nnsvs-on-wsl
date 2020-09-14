@@ -80,3 +80,5 @@ cd ~
 
 # 「おふとんP 歌声DB」でつかうライブラリをインストール
 pip3 install jaconv
+# pysinsyからSinsyを呼び出せるようにする
+export LD_LIBRARY_PATH=/usr/local/lib
