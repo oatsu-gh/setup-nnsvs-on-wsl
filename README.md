@@ -15,11 +15,17 @@ WSL上に[NNSVS](https://github.com/r9y9/nnsvs)の環境構築するバッチと
 
 ### WSLを普段使わない人
 
-1.  WSLのインストールとユーザー作成を行ってください。「WSL インストール」でググったらたくさん出ます。
-2.  **[ここ](https://github.com/oatsu-gh/setup-nnsvs-ubuntu-wsl/archive/master.zip)** からダウンロードした zip を解凍
-3.  解凍したフォルダで「Shift + 右クリック」してPowerShellまたはコマンドプロンプトを起動
-4.  PowerShellで `.\setup_nnsvs_cmd.bat` を実行。（セキュリティ関連の警告が出るかもしれません。）
-5.  10分から30分ほど待機。たまにパスワード入力を求められるので入力してください。
+1.  管理者権限でPowerShellを起動して、次のコマンドを実行
+```shell
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
+2. PCを再起動（必ず）
+3. [Ubuntu](https://www.microsoft.com/ja-jp/p/ubuntu/9nblggh4msv6) をインストール
+4. Ubuntuを起動してユーザー名とパスワードを登録
+5. Ubuntuを閉じる。
+6.  **[ここ](https://github.com/oatsu-gh/setup-nnsvs-ubuntu-wsl/archive/master.zip)** からダウンロードした zip を解凍
+8.  `.\setup_nnsvs_cmd.bat` をダブルクリックで実行。（セキュリティ関連の警告が出るかもしれません。）
+9.  10分から30分ほど待機。たまにパスワード入力を求められるので入力してください。
 
 ### 普段からWSLを使う人
 
