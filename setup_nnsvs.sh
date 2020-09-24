@@ -1,13 +1,12 @@
 # WSL(Ubuntu)でNNSVSの環境構築をするシェルスクリプト
 #
-# WSL2にしておくことをお勧めします。
+# CUDAを使わない場合はWSL1のほうがいいです。
+# WSL2はメモリの使い方がおかしいので、ステージ4で失敗しやすいです。
+# ただし、NFSなどでCUDAを使いたい場合はWSL2が必要です。
 #
 # [参考]
 # Google Colaboratory で NNSVS で遊ぶ mini-HOWTO - Qiita
 # https://qiita.com/taroushirani/items/ec16cb9a6b3b691f5e74
-#
-# 初期$PATH
-# /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program
 #
 
 cd ~
@@ -30,7 +29,7 @@ pip3 install --user numpy cython wheel
 # hts_engine_API をビルド
 git clone https://github.com/r9y9/hts_engine_API
 cd hts_engine_API/src
-python3 waf configure --prefix=/usr/
+python3 waf configure --prefix=$HOME/
 python3 waf build > hts_engine_API_build.log 2>&1
 sudo python3 waf install # original: python3 waf install
 cd ~
@@ -38,7 +37,7 @@ cd ~
 # Sinsyをビルド
 git clone https://github.com/r9y9/sinsy
 cd sinsy/src/ && mkdir -p build && cd build
-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON  -DCMAKE_INSTALL_PREFIX=/usr/local/ ..
+cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON  -DCMAKE_INSTALL_PREFIX=$HOME/.local/ ..
 make -j  > sinsy_build.log 2>&1
 sudo make install # original: make install
 cd ~
@@ -46,11 +45,13 @@ cd ~
 # PySinsyをインストール
 git clone https://github.com/r9y9/pysinsy
 cd pysinsy
-export SINSY_INSTALL_PREFIX=/usr/local/
+export SINSY_INSTALL_PREFIX=$HOME/.local/
 pip3 install .
 cd ~
 
-# nnmnkwii をインストール
+## nnmnkwii をインストール
+# Cython のバージョン違いによるインストール失敗を回避するために、先に更新しておく。
+pip3 install cython
 # pip3 install nnmnkwii
 git clone https://github.com/r9y9/nnmnkwii
 cd nnmnkwii && pip3 install .
@@ -66,8 +67,6 @@ cd nnsvs && pip3 install .
 cd ~
 
 # python で python3 が起動するようにする。
-# UbuntuならできますがDebianは失敗します。
-
 sudo apt install python-is-python3
 
 # nnsvs/run.sh の stage1 で躓く問題を対策 (詳細: bandmat をPyPIからインストールできない。)
@@ -75,5 +74,5 @@ git clone https://github.com/MattShannon/bandmat
 cd bandmat && pip3 install .
 cd ~
 
-# 「おふとんP 歌声DB」でつかうライブラリをインストール
+# NNSVSでモデル生成するときに使うライブラリをインストール
 pip3 install jaconv
