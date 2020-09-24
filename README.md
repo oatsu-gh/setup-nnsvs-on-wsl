@@ -5,7 +5,7 @@ WSL上に[NNSVS](https://github.com/r9y9/nnsvs)の環境構築するバッチと
 ## 動作確認環境
 
 -   Windows 10 Home 2004
--   WSL1, 2（Ubuntu 20.04 LTS, Debian）
+-   WSL1, 2（Ubuntu 20.04 LTS, Ubuntu）
 
 ### 補足
 
