@@ -29,23 +29,23 @@ pip3 install --user numpy cython wheel
 # hts_engine_API をビルド
 git clone https://github.com/r9y9/hts_engine_API
 cd hts_engine_API/src
-python3 waf configure --prefix=$HOME/.local/
+python3 waf configure --prefix=/usr/
 python3 waf build > hts_engine_API_build.log 2>&1
-python3 waf install # original: python3 waf install
+sudo python3 waf install # original: python3 waf install
 cd ~
 
 # Sinsyをビルド
 git clone https://github.com/r9y9/sinsy
 cd sinsy/src/ && mkdir -p build && cd build
-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON  -DCMAKE_INSTALL_PREFIX=$HOME/.local/ ..
+cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON  -DCMAKE_INSTALL_PREFIX=/usr/local/ ..
 make -j  > sinsy_build.log 2>&1
-make install # original: make install
+sudo make install # original: make install
 cd ~
 
 # PySinsyをインストール
 git clone https://github.com/r9y9/pysinsy
 cd pysinsy
-export SINSY_INSTALL_PREFIX=$HOME/.local/
+export SINSY_INSTALL_PREFIX=/usr/local/
 pip3 install .
 cd ~
 
@@ -78,6 +78,9 @@ cd ~
 # NNSVSでモデル生成するときに使うライブラリをインストール
 pip3 install jaconv
 pip3 install tqdm
+
+# PySinsy が Sinsy にアクセスできるようにする
+export LD_LIBRARY_PATH=/usr/local/lib
 
 # 終わりを知らせる
 echo $'\a'
