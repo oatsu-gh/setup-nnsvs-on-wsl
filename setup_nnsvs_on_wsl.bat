@@ -1,4 +1,2 @@
-REM WSLã§NNSVSã®ç’°å¢ƒæ§‹ç¯‰ã‚’ã™ã‚‹ãƒãƒƒãƒ
-
-wsl sudo apt install git -y
+REM WSL‚ÅNNSVS‚ÌŠÂ‹«\’z‚ğ‚·‚éƒoƒbƒ`
 wsl ./setup_nnsvs.sh

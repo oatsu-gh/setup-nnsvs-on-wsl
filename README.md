@@ -5,7 +5,7 @@ WSL上に[NNSVS](https://github.com/r9y9/nnsvs)の環境構築するバッチと
 ## 動作確認環境
 
 -   Windows 10 Home 2004
--   WSL1, 2（Ubuntu 20.04 LTS, Debian）
+-   WSL1, 2（Ubuntu 20.04 LTS, Ubuntu）
 
 ### 補足
 
@@ -23,13 +23,13 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 3. **[Ubuntu](https://www.microsoft.com/ja-jp/p/ubuntu/9nblggh4msv6)** をインストール
 4. Ubuntuを起動してユーザー名とパスワードを登録
 5. Ubuntuを閉じる。
-6.  **[ここ](https://github.com/oatsu-gh/setup-nnsvs-ubuntu-wsl/archive/master.zip)** からダウンロードした zip を解凍
+6.  このREADMEをブラウザで見ている場合は、**[ここ](https://github.com/oatsu-gh/setup-nnsvs-ubuntu-wsl/archive/master.zip)** からダウンロードした zip を解凍
 8.  **setup_nnsvs_on_wsl.bat** をダブルクリックで実行。（セキュリティ関連の警告が出るかもしれません。）
 9.  10分から30分ほど待機。たまにパスワード入力を求められるので入力してください。
 
 ### 普段からWSLを使う人
 
-1. **setup_nnsvs_on_wsl.bat** をダブルクリック実行により、NNSVSをインストール。
+1. **setup_nnsvs_on_wsl.bat** をダブルクリック実行で、NNSVSをインストール。
 2. CUDAを使用可能なバージョンのWSL2を利用している場合は **setup_cuda_on_wsl.bat** もダブルクリック実行。
 
 

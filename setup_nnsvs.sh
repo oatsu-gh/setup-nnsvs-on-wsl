@@ -1,22 +1,24 @@
 # WSL(Ubuntu)でNNSVSの環境構築をするシェルスクリプト
 #
-# WSL2にしておくことをお勧めします。
+# CUDAを使わない場合はWSL1のほうがいいです。
+# WSL2はメモリの使い方がおかしいので、ステージ4で失敗しやすいです。
+# ただし、NFSなどでCUDAを使いたい場合はWSL2が必要です。
 #
 # [参考]
 # Google Colaboratory で NNSVS で遊ぶ mini-HOWTO - Qiita
 # https://qiita.com/taroushirani/items/ec16cb9a6b3b691f5e74
 #
-# 初期$PATH
-# /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program
-#
 
 cd ~
-
+echo $'\a'
 # Ubuntuの更新
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove
 # Python3 パッケージ管理ツールのインストール
 sudo apt install python3-pip -y
 sudo apt install cmake -y
+
+# python で python3 が起動するようにする。 (次回のWSL起動時から)
+sudo apt install python-is-python3
 
 # Python3 で使うNumPyとCythonをインストール
 # python3 -m pip install --upgrade pip
@@ -50,10 +52,13 @@ export SINSY_INSTALL_PREFIX=/usr/local/
 pip3 install .
 cd ~
 
-# nnmnkwii をインストール
+## nnmnkwii をインストール
 # pip3 install nnmnkwii
 git clone https://github.com/r9y9/nnmnkwii
 cd nnmnkwii && pip3 install .
+# ---------------------------------------------------------
+# install に1回失敗してエラー出るけど自動でやり直してインストールされるから大丈夫
+# ---------------------------------------------------------
 cd ~
 
 # NNSVS をインストール
@@ -65,15 +70,17 @@ cd nnsvs && pip3 install .
 # ---------------------------------------------------------
 cd ~
 
-# python で python3 が起動するようにする。
-# UbuntuならできますがDebianは失敗します。
-
-sudo apt install python-is-python3
-
 # nnsvs/run.sh の stage1 で躓く問題を対策 (詳細: bandmat をPyPIからインストールできない。)
 git clone https://github.com/MattShannon/bandmat
 cd bandmat && pip3 install .
 cd ~
 
-# 「おふとんP 歌声DB」でつかうライブラリをインストール
+# NNSVSでモデル生成するときに使うライブラリをインストール
 pip3 install jaconv
+pip3 install tqdm
+
+# PySinsy が Sinsy にアクセスできるようにする
+export LD_LIBRARY_PATH=/usr/local/lib
+
+# 終わりを知らせる
+echo $'\a'
