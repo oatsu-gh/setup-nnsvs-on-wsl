@@ -10,7 +10,7 @@
 #
 
 cd ~
-
+echo $'\a'
 # Ubuntuの更新
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove
 # Python3 パッケージ管理ツールのインストール
@@ -76,3 +76,7 @@ cd ~
 
 # NNSVSでモデル生成するときに使うライブラリをインストール
 pip3 install jaconv
+pip3 install tqdm
+
+# 終わりを知らせる
+echo $'\a'

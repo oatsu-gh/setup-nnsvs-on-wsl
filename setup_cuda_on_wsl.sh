@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+echo $'\a'
 sudo apt update
 sudo apt upgrade -y
 
