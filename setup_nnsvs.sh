@@ -17,6 +17,9 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove
 sudo apt install python3-pip -y
 sudo apt install cmake -y
 
+# python で python3 が起動するようにする。 (次回のWSL起動時から)
+sudo apt install python-is-python3
+
 # Python3 で使うNumPyとCythonをインストール
 # python3 -m pip install --upgrade pip
 pip3 install --upgrade pip
@@ -66,9 +69,6 @@ cd nnsvs && pip3 install .
 # PATH通ってないけど大丈夫？って言われるけど気にしなくてOK
 # ---------------------------------------------------------
 cd ~
-
-# python で python3 が起動するようにする。
-sudo apt install python-is-python3
 
 # nnsvs/run.sh の stage1 で躓く問題を対策 (詳細: bandmat をPyPIからインストールできない。)
 git clone https://github.com/MattShannon/bandmat
