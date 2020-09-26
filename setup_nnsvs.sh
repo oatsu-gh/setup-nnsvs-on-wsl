@@ -29,9 +29,9 @@ pip3 install --user numpy cython wheel
 # hts_engine_API をビルド
 git clone https://github.com/r9y9/hts_engine_API
 cd hts_engine_API/src
-python3 waf configure --prefix=$HOME/
+python3 waf configure --prefix=$HOME/.local/
 python3 waf build > hts_engine_API_build.log 2>&1
-sudo python3 waf install # original: python3 waf install
+python3 waf install # original: python3 waf install
 cd ~
 
 # Sinsyをビルド
@@ -39,7 +39,7 @@ git clone https://github.com/r9y9/sinsy
 cd sinsy/src/ && mkdir -p build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON  -DCMAKE_INSTALL_PREFIX=$HOME/.local/ ..
 make -j  > sinsy_build.log 2>&1
-sudo make install # original: make install
+make install # original: make install
 cd ~
 
 # PySinsyをインストール
@@ -50,11 +50,12 @@ pip3 install .
 cd ~
 
 ## nnmnkwii をインストール
-# Cython のバージョン違いによるインストール失敗を回避するために、先に更新しておく。
-pip3 install cython
 # pip3 install nnmnkwii
 git clone https://github.com/r9y9/nnmnkwii
 cd nnmnkwii && pip3 install .
+# ---------------------------------------------------------
+# install に1回失敗してエラー出るけど自動でやり直してインストールされるから大丈夫
+# ---------------------------------------------------------
 cd ~
 
 # NNSVS をインストール
