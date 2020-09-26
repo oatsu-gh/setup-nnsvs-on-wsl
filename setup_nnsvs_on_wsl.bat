@@ -1,2 +1,2 @@
-REM WSLã§NNSVSã®ç’°å¢ƒæ§‹ç¯‰ã‚’ã™ã‚‹ãƒãƒƒãƒ
+REM WSL‚ÅNNSVS‚ÌŠÂ‹«\’z‚ð‚·‚éƒoƒbƒ`
 wsl ./setup_nnsvs.sh
