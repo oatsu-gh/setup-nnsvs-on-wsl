@@ -39,7 +39,9 @@ cd ~
 
 # Sinsyをビルド
 git clone https://github.com/r9y9/sinsy
-cd sinsy/src/ && mkdir -p build && cd build
+cd sinsy/src/
+mkdir -p build
+cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON  -DCMAKE_INSTALL_PREFIX=/usr/local/ ..
 make -j  > sinsy_build.log 2>&1
 sudo make install # original: make install
@@ -55,7 +57,8 @@ cd ~
 ## nnmnkwii をインストール
 # pip3 install nnmnkwii
 git clone https://github.com/r9y9/nnmnkwii
-cd nnmnkwii && pip3 install .
+cd nnmnkwii
+pip3 install .
 # ---------------------------------------------------------
 # install に1回失敗してエラー出るけど自動でやり直してインストールされるから大丈夫
 # ---------------------------------------------------------
@@ -64,7 +67,8 @@ cd ~
 # NNSVS をインストール
 # これ結構時間かかる
 git clone https://github.com/r9y9/nnsvs
-cd nnsvs && pip3 install .
+cd nnsvs
+pip3 install .
 # ---------------------------------------------------------
 # PATH通ってないけど大丈夫？って言われるけど気にしなくてOK
 # ---------------------------------------------------------
@@ -72,7 +76,8 @@ cd ~
 
 # nnsvs/run.sh の stage1 で躓く問題を対策 (詳細: bandmat をPyPIからインストールできない。)
 git clone https://github.com/MattShannon/bandmat
-cd bandmat && pip3 install .
+cd bandmat
+pip3 install .
 cd ~
 
 # NNSVSでモデル生成するときに使うライブラリをインストール
