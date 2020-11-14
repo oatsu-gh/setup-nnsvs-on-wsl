@@ -41,9 +41,17 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
    （参考：[WSL 2 で GPU を使う（WSL 2 の Ubuntu で，CUDA や PyTorch や TensorFlow 2.2 GPU 版を動かす．Docker は使わない，Windows 10 Insider Program，WSL 2 上 の Ubuntu を使用）](https://www.kkaneko.jp/tools/wsl/wsl_tensorflow2.html)）
 3. **setup_cuda_on_wsl.bat** をダブルクリック実行して、WSLにCUDAとPyTorchをインストール
 
-## アップデート方法
-- 2020年10月以前に本ツールでインストールした環境をアップデートできます。
-- update_nnsvs_on_wsl.bat をダブルクリック実行してください。
+## NNSVSのアップデート
+2020年10月以前に本ツールでインストールした環境をアップデートできます。
+
+### アップデート手順
+
+1. **update_nnsvs_on_wsl.bat** をダブルクリック実行
+2. `[sudo] password for crazy-sub:` と表示されたらUbuntuのパスワードを入力してEnter
+3. `Proceed (y/n)?` と表示されたら `y` と入力してEnter（1回目）
+4. `Proceed (y/n)?` と表示されたら `y` と入力してEnter（2回目）
+5. `Proceed (y/n)?` と表示されたら `y` と入力してEnter（3回目）
+6. 処理が完了したら音が鳴ります。
 
 ## 参考
 

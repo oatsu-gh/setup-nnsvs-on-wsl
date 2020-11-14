@@ -1,3 +1,3 @@
-REM WSLä¸Šã®NNSVSã‚’ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã™ã‚‹ãƒãƒƒãƒ
+REM WSLã‚ÌNNSVS‚ðƒAƒbƒvƒf[ƒg‚·‚éƒoƒbƒ`
 
-wsl sh/update_nnsvs.sh
+wsl bash ./sh/update_nnsvs.sh
