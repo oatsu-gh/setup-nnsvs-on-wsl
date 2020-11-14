@@ -1,10 +1,12 @@
 # setup-nnsvs-on-wsl
 
-WSL上に[NNSVS](https://github.com/r9y9/nnsvs)の環境構築するバッチとシェルスクリプト
+WSL上に[NNSVS](https://github.com/r9y9/nnsvs)の環境構築とアップデートするバッチとシェルスクリプト
 
 ## 動作確認環境
 
--   Windows 10 Home 2004
+-   Windows 10 Home Insider Preview
+    -   バージョン 2004
+    -   OSビルド 20241.1005
 -   WSL1, 2（Ubuntu 20.04 LTS, Ubuntu）
 
 ### 補足
@@ -30,7 +32,18 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 ### 普段からWSLを使う人
 
 1. **setup_nnsvs_on_wsl.bat** をダブルクリック実行で、NNSVSをインストール。
-2. CUDAを使用可能なバージョンのWSL2を利用している場合は **setup_cuda_on_wsl.bat** もダブルクリック実行。
+
+#### CUDAの環境を作りたい場合（CUDAを使用可能なバージョンのWSL2を利用している場合）
+
+1. Windowsに Visual C++ Build Tools をインストール
+   （参考：[Visual Studio Community 2019 vesion 16.2, Visual C++ ビルドツールのインストール（Windows 上）](https://www.kkaneko.jp/tools/win/vs2019.html#S1)）
+2. Windowsに [CUDA Toolkit 10.1](https://developer.nvidia.com/cuda-10.1-download-archive-update2?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exenetwork) をインストール
+   （参考：[WSL 2 で GPU を使う（WSL 2 の Ubuntu で，CUDA や PyTorch や TensorFlow 2.2 GPU 版を動かす．Docker は使わない，Windows 10 Insider Program，WSL 2 上 の Ubuntu を使用）](https://www.kkaneko.jp/tools/wsl/wsl_tensorflow2.html)）
+3. **setup_cuda_on_wsl.bat** をダブルクリック実行して、WSLにCUDAとPyTorchをインストール
+
+## アップデート方法
+- 2020年10月以前に本ツールでインストールした環境をアップデートできます。
+- update_nnsvs_on_wsl.bat をダブルクリック実行してください。
 
 ## 参考
 

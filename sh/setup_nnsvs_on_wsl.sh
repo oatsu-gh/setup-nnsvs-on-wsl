@@ -1,8 +1,10 @@
+#!/usr/bin/env bash
+# coding:utf-8
+
 # WSL(Ubuntu)でNNSVSの環境構築をするシェルスクリプト
 #
-# CUDAを使わない場合はWSL1のほうがいいです。
-# WSL2はメモリの使い方がおかしいので、ステージ4で失敗しやすいです。
-# ただし、NFSなどでCUDAを使いたい場合はWSL2が必要です。
+# CUDAを使わない場合はWSL1でいいです。
+# ただし、NFSやRMDNなどでCUDAを使いたい場合はWSL2が必要です。
 #
 # [参考]
 # Google Colaboratory で NNSVS で遊ぶ mini-HOWTO - Qiita

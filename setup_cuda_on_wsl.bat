@@ -2,6 +2,7 @@ REM WSLでNNSVSの環境構築をするバッチ
 
 wsl --update
 wsl uname -r
-REM WSLのバージョンが4.9.121 以降になっていますか？
+REM "Is your WSL version >= 4.9.121 ?"
+REM " If lower, CUDA is unable."
 
-wsl bash setup_pytorch_on_wsl.sh
+wsl sh/setup_cuda_on_wsl.sh

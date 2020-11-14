@@ -1,2 +1,3 @@
 REM WSLでNNSVSの環境構築をするバッチ
-wsl ./setup_nnsvs.sh
+
+wsl sh/setup_nnsvs_on_wsl.sh
