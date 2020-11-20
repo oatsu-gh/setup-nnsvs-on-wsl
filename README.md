@@ -56,7 +56,7 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 ## 参考
 
 -   [Google Colaboratory で NNSVS で遊ぶ mini-HOWTO - Qiita](https://qiita.com/taroushirani/items/ec16cb9a6b3b691f5e74)
-    -   setup_nnsvs.sh はほぼ上記記事のコピペです。
+    -   setup_nnsvs_on_wsl.sh はほぼ上記記事のコピペです。
     -   `sudo` を数か所増やしました。
     -   各種ライブラリのインストールパスをWSL用に調整しました。
     -   `python` `pip` を `python3` `pip3` にしました。
