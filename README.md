@@ -53,6 +53,10 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 5. `Proceed (y/n)?` と表示されたら `y` と入力してEnter（3回目）
 6. 処理が完了したら音が鳴ります。
 
+## 困ったときは
+
+`import sinsy` に失敗する（Sinsyがないって言われる）ときは、とりあえず `export LD_LIBRARY_PATH=/usr/local/lib` をしたらいいです。
+
 ## 参考
 
 -   [Google Colaboratory で NNSVS で遊ぶ mini-HOWTO - Qiita](https://qiita.com/taroushirani/items/ec16cb9a6b3b691f5e74)

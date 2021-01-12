@@ -34,9 +34,11 @@ pip3 install --user numpy cython wheel
 # hts_engine_API をビルド
 git clone https://github.com/r9y9/hts_engine_API
 cd hts_engine_API/src
-python3 waf configure --prefix=/usr/
-python3 waf build > hts_engine_API_build.log 2>&1
-sudo python3 waf install # original: python3 waf install
+mkdir -p build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON  -DCMAKE_INSTALL_PREFIX=/usr/local/ ..
+make -j > hts_engine_api_build.log 2>&1
+sudo make install
 cd ~
 
 # Sinsyをビルド
@@ -46,7 +48,7 @@ mkdir -p build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON  -DCMAKE_INSTALL_PREFIX=/usr/local/ ..
 make -j  > sinsy_build.log 2>&1
-sudo make install # original: make install
+sudo make install
 cd ~
 
 # PySinsyをインストール
