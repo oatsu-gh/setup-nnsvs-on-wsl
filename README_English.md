@@ -10,8 +10,12 @@
 
 ## How to use
 
+See [How to let sing Virtual Singer Oniku Kurumi (NNSVS on WSL)](https://note.com/crazy_utau/n/na891006c24bc) .
+
+### Simple how to use
+
 1. Install [**Ubuntu**](https://www.microsoft.com/ja-jp/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab) and do initial setting of it.
-3. double click **setup_nnsvs_on_wsl.bat** .
+2. double click **setup_nnsvs_on_wsl.bat** .
 
 ### Advanced (optional)
 
